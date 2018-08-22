@@ -1,0 +1,15 @@
+<section id="Content">
+    <h1 class="article-heading">{{ fields?.headline }}</h1>
+
+    <div *ngFor="let content of fields?.content" class="content">
+        <ng-container [ngSwitch]="content.sys.contentType.sys.id">
+            <div *ngSwitchCase="'quote'" class="quote">
+                <img src="assets/Quote.svg" alt="Quote">
+                <p [innerHTML]="content.fields.content" class="article-heading"></p>
+            </div>
+            <p *ngSwitchDefault [innerHTML]="content.fields.content"></p>
+        </ng-container>
+
+    </div>
+</section>
+<app-footer></app-footer>

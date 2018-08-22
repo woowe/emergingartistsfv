@@ -1,1 +1,73 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700i|Oranienbaum');
+
+$primary-bg: #1b1a18;
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+
+    background: $primary-bg;
+    color: white;
+}
+
+h1 {
+    font-family: 'Oranienbaum', serif;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 100%;
+}
+
+.article-heading {
+    font-family: 'Oranienbaum', serif;
+    font-weight: normal;
+    font-size: 30px;
+}
+
+button,
+.btn-font {
+    font-family: 'Oranienbaum', serif;
+    font-weight: normal;
+    font-size: 24px;
+}
+
+body,
+p,
+a,
+li,
+span,
+.body-font {
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 135%;
+    letter-spacing: 1px;
+}
+
+em,
+strong,
+.body-em-font {
+    @extend .body-font;
+
+    font-weight: 500;
+}
+
+.body-quote-font {
+    @extend .body-font;
+
+    font-size: 48px;
+    line-height: normal;
+    letter-spacing: normal;
+}
+
+.body-quote-content-font {
+    @extend .body-quote-font;
+
+    font-weight: 700;
+    font-style: italic;
+}
+
+p {
+    text-indent: 24px;
+}
