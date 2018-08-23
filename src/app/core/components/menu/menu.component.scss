@@ -66,6 +66,8 @@ svg {
         bottom: 0;
         right: 0;
 
+        z-index: 1;
+
         .img-wrap {
             width: 100px;
             height: 100px;
@@ -91,6 +93,9 @@ svg {
     .wrap {
         width: calc(100% - 48px);
         max-width: 650px;
+
+        position: relative;
+        z-index: 2;
 
         a {
             text-indent: 0;
