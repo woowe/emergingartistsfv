@@ -1,14 +1,22 @@
-<svg (click)="clicked()" width="36" height="10" viewBox="0 0 36 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect width="36" height="9" fill="black" fill-opacity="0" transform="translate(0 1)"/>
-    <line y1="0.5" x2="36" y2="0.5" stroke="white"/>
-    <line y1="9.5" x2="23.76" y2="9.5" stroke="white"/>
+<svg (click)="clicked()" [class.active]="active" width="36" height="10" viewBox="0 0 36 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="36" height="9" fill="black" fill-opacity="0" transform="translate(0 1)" />
+    <line [attr.y1]="!active ? 0.5 : 5" x2="36" [attr.y2]="!active ? 0.5 : 5" stroke="white" />
+    <line [attr.y1]="!active ? 9.5 : 5" x2="23.76" [attr.y2]="!active ? 9.5 : 5" stroke="white" />
 </svg>
 
-<div class="menu" [class.active]="active">
-    <div class="wrap" fxLayout="column">
-        <a (click)="clicked()" routerLink="/home">01 <span>Home</span></a>
-        <a (click)="clicked()" routerLink="/overview">02 <span>Overview</span></a>
-        <a (click)="clicked()" routerLink="/team">03 <span>Who We Are</span></a>
-        <a (click)="clicked()" routerLink="/get-involved">04 <span>Get Involved</span></a>
-    </div>
+<div *ngIf="active" [@visit]="active" class="menu" [class.active]="active" [ngClass.lt-lg]="'mobile'">
+    <nav class="wrap" fxLayout="column">
+        <a (click)="clicked()" routerLink="/home">01
+            <span>Home</span>
+        </a>
+        <a (click)="clicked()" routerLink="/overview">02
+            <span>Overview</span>
+        </a>
+        <a (click)="clicked()" routerLink="/team">03
+            <span>Who We Are</span>
+        </a>
+        <a (click)="clicked()" routerLink="/get-involved">04
+            <span>Get Involved</span>
+        </a>
+    </nav>
 </div>

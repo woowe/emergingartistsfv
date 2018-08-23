@@ -7,11 +7,12 @@ import { FooterComponent } from './components/footer/footer.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { RouterModule } from '@angular/router';
+import { RouterAnimComponent } from './components/router-anim/router-anim.component';
 
 @NgModule({
     imports: [CommonModule, FlexLayoutModule, RouterModule],
     providers: [ContentfulService, ImgRatioService],
-    declarations: [RatioImgComponent, FooterComponent, MenuComponent],
-    exports: [RatioImgComponent, FooterComponent, MenuComponent]
+    declarations: [RatioImgComponent, FooterComponent, MenuComponent, RouterAnimComponent],
+    exports: [RatioImgComponent, FooterComponent, MenuComponent, RouterAnimComponent]
 })
 export class CoreModule {}

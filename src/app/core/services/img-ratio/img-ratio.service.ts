@@ -46,8 +46,6 @@ export class ImgRatioService {
         const new_width = img_rect.width * (r.width || r);
         const new_height = img_rect.height * (r.height || r);
 
-        console.log(r, new_width, new_height);
-
         renderer.setStyle(img, 'width', `${new_width}px`);
         renderer.setStyle(img, 'height', `${new_height}px`);
     }

@@ -1,4 +1,4 @@
-<div class="content">
+<div [@visit]="animState" class="content">
     <h1 class="article-heading">{{ (fields$ | async)?.headline }}</h1>
     <p *ngFor="let content of (fields$ | async)?.content" [innerHTML]="content.fields.content"></p>
     <div class="actions" fxLayout="column" fxLayoutAlign="start start">

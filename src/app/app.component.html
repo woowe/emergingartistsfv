@@ -4,4 +4,8 @@
     <span>E.A.F.V</span>
 </div>
 
-<router-outlet></router-outlet>
+<!-- <app-router-anim *ngIf="o.isActivated"></app-router-anim> -->
+
+<main fxFlex="1 1 auto" fxLayout="column" [@fadeAnimation]="o.isActivated ? o.activatedRoute : ''">
+    <router-outlet #o="outlet"></router-outlet>
+</main>

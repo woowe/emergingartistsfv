@@ -1,4 +1,4 @@
-<div class="content">
+<div [@visit]="animState" class="content">
     <div class="team-images" fxLayout="row">
         <div (click)="selectMember(member)" *ngFor="let member of (fields$ | async)?.members" fxFlex="33%" class="image" [class.active]="selectedMember === member">
             <div class="img-wrap">
@@ -7,7 +7,7 @@
             <img class="selected-arrow" *ngIf="selectedMember === member" src="/assets/Forward.svg" alt="Forward Arrow">
         </div>
     </div>
-    <div class="selected-member">
+    <div [@switch]="selectedMember ? selectedMember.fields.name : ''" class="selected-member">
         <h1 class="article-heading">{{ selectedMember?.fields.name }}</h1>
         <p>{{ selectedMember?.fields.bio }}</p>
     </div>
