@@ -1,6 +1,6 @@
 <div [@visit]="animState" class="content">
-    <div class="hero" fxLayoutAlign="center center">
-        <app-ratio-img imgsize="cover" [src]="fields?.image.fields.file.url" alt=""></app-ratio-img>
+    <div *ngIf="fields?.overlay_text" class="hero" fxLayoutAlign="center center">
+        <app-ratio-img imgsize="cover" [src]="fields?.image.fields.file.url + '?fm=jpg&fl=progressive&w=486&h=484'" alt=""></app-ratio-img>
         <h1 class="overlay">
             {{ fields?.overlay_text }}
         </h1>

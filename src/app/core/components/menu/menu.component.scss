@@ -53,8 +53,39 @@ svg {
 
     transition: opacity 2s ease;
 
+    overflow: hidden;
+
     &.active {
         opacity: 1;
+    }
+
+    .ghost-art {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+
+        .img-wrap {
+            width: 100px;
+            height: 100px;
+
+            overflow: hidden;
+
+            position: absolute;
+
+            transform: translate(-50%, -50%);
+
+            filter: blur(4px);
+            opacity: 0.28;
+
+            app-ratio-img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
     }
 
     .wrap {

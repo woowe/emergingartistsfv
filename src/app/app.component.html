@@ -6,6 +6,13 @@
 
 <!-- <app-router-anim *ngIf="o.isActivated"></app-router-anim> -->
 
+
+
+<!-- [@fadeAnimation]="o.isActivated ? o.activatedRoute : ''" -->
 <main fxFlex="1 1 auto" fxLayout="column" [@fadeAnimation]="o.isActivated ? o.activatedRoute : ''">
+    <div [@loading] class="anim">
+        <div class="inner a"></div>
+        <div class="inner b"></div>
+    </div>
     <router-outlet #o="outlet"></router-outlet>
 </main>

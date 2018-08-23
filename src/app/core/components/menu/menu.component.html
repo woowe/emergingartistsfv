@@ -4,7 +4,13 @@
     <line [attr.y1]="!active ? 9.5 : 5" x2="23.76" [attr.y2]="!active ? 9.5 : 5" stroke="white" />
 </svg>
 
-<div *ngIf="active" [@visit]="active" class="menu" [class.active]="active" [ngClass.lt-lg]="'mobile'">
+<div #menu *ngIf="active" [@visit]="active" class="menu" [class.active]="active" [ngClass.lt-lg]="'mobile'">
+    <div class="ghost-art">
+        <div *ngFor="let image of (images$ | async)" [style.left]="image.position.left + 'px'" [style.top]="image.position.top + 'px'"
+            class="img-wrap">
+            <app-ratio-img imgsize="cover" [src]="image.fields.image.fields.file.url + '?fm=jpg&fl=progressive&w=100&h=100'" alt=""></app-ratio-img>
+        </div>
+    </div>
     <nav class="wrap" fxLayout="column">
         <a (click)="clicked()" routerLink="/home">01
             <span>Home</span>

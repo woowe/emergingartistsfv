@@ -41,4 +41,10 @@ export class ContentfulService {
     getTeamData() {
         return this.cdaClient.getEntry(CONFIG.entryIds.team);
     }
+
+    getGhostArt() {
+        return this.cdaClient.getEntries({
+            content_type: 'ghostArt'
+        });
+    }
 }

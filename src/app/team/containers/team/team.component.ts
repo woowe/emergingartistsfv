@@ -13,6 +13,7 @@ import {
     visitAnimationTrigger,
     switchAnimationTrigger
 } from './team.animations';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
     selector: 'app-team',
@@ -28,7 +29,11 @@ export class TeamComponent implements OnInit, AfterViewInit {
     selectedMember: any;
     animState;
 
-    constructor(private contentful: ContentfulService) {}
+    constructor(
+        private contentful: ContentfulService,
+        private meta: Meta,
+        private title: Title
+    ) {}
 
     ngOnInit() {
         this.fields$ = from(this.contentful.getTeamData()).pipe(
@@ -41,6 +46,25 @@ export class TeamComponent implements OnInit, AfterViewInit {
                 console.log(this.selectedMember);
 
                 this.animState = 'loaded';
+
+                this.title.setTitle(
+                    (fields as any).metaTitle ||
+                        'Emerging Artists Fox Valley'
+                );
+
+                this.meta.addTags([
+                    { name: 'author', content: 'emergingartistsfv.com' },
+                    {
+                        name: 'keywords',
+                        content: ((fields as any).metaKeywords || []).join(
+                            ', '
+                        )
+                    },
+                    {
+                        name: 'description',
+                        content: (fields as any).metaDescription || ''
+                    }
+                ]);
             }),
             share()
         );
