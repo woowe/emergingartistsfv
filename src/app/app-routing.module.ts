@@ -19,7 +19,12 @@ const routes: Routes = [
         path: 'get-involved',
         loadChildren:
             './get-involved/get-involved-routing.module#GetInvolvedRoutingModule'
-    }
+    },
+    {
+        path: 'team',
+        loadChildren:
+            './team/team-routing.module#TeamRoutingModule'
+    },
 ];
 
 @NgModule({

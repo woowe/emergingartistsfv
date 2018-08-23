@@ -21,7 +21,9 @@ h1 {
 
 .article-heading {
     font-family: 'Oranienbaum', serif;
+    font-style: normal;
     font-weight: normal;
+    line-height: normal;
     font-size: 30px;
 }
 
@@ -30,19 +32,26 @@ button,
     font-family: 'Oranienbaum', serif;
     font-weight: normal;
     font-size: 24px;
+    text-transform: uppercase;
 }
 
-body,
 p,
 a,
 li,
 span,
 .body-font {
     font-family: 'Fira Sans', sans-serif;
+    font-style: normal;
     font-weight: 300;
+    line-height: 24px;
     font-size: 18px;
-    line-height: 135%;
-    letter-spacing: 1px;
+    letter-spacing: 0.02em;
+
+    text-decoration: none;
+}
+
+p {
+    text-indent: 24px;
 }
 
 em,

@@ -1,5 +1,9 @@
 :host {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+
     padding: 0 24px;
     padding-top: 48px;
 }
@@ -8,8 +12,11 @@
     position: relative;
 
     width: 100%;
+    max-width: calc(411px - 48px);
     height: 486px;
     max-height: 56vh;
+
+    margin: 0 auto;
 
     overflow: hidden;
 
@@ -19,9 +26,16 @@
         top: 50%;
         transform: translate(-50%, -50%);
 
-        mix-blend-mode: difference;
-
+        font-family: 'Oranienbaum', serif;
+        font-style: normal;
+        font-weight: normal;
+        line-height: normal;
+        font-size: 48px;
         text-align: center;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+
+        mix-blend-mode: difference;
 
         margin: 0;
     }
@@ -31,6 +45,9 @@
     margin-top: 24px;
 
     .link {
+        color: white;
+        cursor: pointer;
+
         &:not(:last-of-type) {
             margin-bottom: 12px;
         }

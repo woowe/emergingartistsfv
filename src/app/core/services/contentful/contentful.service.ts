@@ -9,7 +9,9 @@ const CONFIG = {
 
     entryIds: {
         homepage: '2aGAO8Y0jKi2ssk0aesaKs',
-        overview: '2KMq5FOwmcWCem6Gugi4SI'
+        overview: '2KMq5FOwmcWCem6Gugi4SI',
+        getInvolved: '2Rvdirll0IgiggIU6UsmWc',
+        team: '2KfkaNoY124iaY0uUGqMmw'
     }
 };
 
@@ -30,5 +32,13 @@ export class ContentfulService {
 
     getOverviewData() {
         return this.cdaClient.getEntry(CONFIG.entryIds.overview);
+    }
+
+    getGetInvolvedData() {
+        return this.cdaClient.getEntry(CONFIG.entryIds.getInvolved);
+    }
+
+    getTeamData() {
+        return this.cdaClient.getEntry(CONFIG.entryIds.team);
     }
 }
