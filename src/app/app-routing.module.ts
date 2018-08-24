@@ -22,9 +22,12 @@ const routes: Routes = [
     },
     {
         path: 'team',
-        loadChildren:
-            './team/team-routing.module#TeamRoutingModule'
+        loadChildren: './team/team-routing.module#TeamRoutingModule'
     },
+    {
+        path: 'donate',
+        loadChildren: './donate/donate-routing.module#DonateRoutingModule'
+    }
 ];
 
 @NgModule({
