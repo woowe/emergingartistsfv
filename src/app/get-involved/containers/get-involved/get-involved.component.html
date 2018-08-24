@@ -2,7 +2,7 @@
     <h1 class="article-heading">{{ (fields$ | async)?.headline }}</h1>
     <p *ngFor="let content of (fields$ | async)?.content" [innerHTML]="content.fields.content"></p>
     <div class="actions" fxLayout="column" fxLayoutAlign="start start">
-        <a *ngFor="let action of (fields$ | async)?.actions" [routerLink]=" action.fields.url " class="link btn-font">{{ action.fields.title }}
+        <a *ngFor="let action of (fields$ | async)?.actions" [href]=" action.fields.url " class="link btn-font">{{ action.fields.title }}
             <img src="/assets/Forward.svg" alt="Forward Arrow"> </a>
     </div>
 </div>
