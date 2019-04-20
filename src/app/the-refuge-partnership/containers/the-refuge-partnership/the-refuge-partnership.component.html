@@ -1,0 +1,31 @@
+<section [@visit]="animState" id="Content" fxLayout="column" fxLayoutGap="24px">
+    <app-header-image
+        *ngIf="fields?.headerImage; let image"
+        [src]="image.fields.file.url"
+    ></app-header-image>
+    <h1 class="article-heading">{{ fields?.headline }}</h1>
+
+    <div *ngFor="let node of fields?.content.content" class="content">
+        <p *ngFor="let content of node.content">{{ content.value }}</p>
+    </div>
+
+    <div class="actions">
+        <a
+            class="link"
+            href="https://refugearts.org/"
+            target="_blank"
+            rel="noopener"
+            fxLayout="row"
+            fxLayoutGap="12px"
+            fxLayoutAlign="start center"
+        >
+            <img src="../../../../assets//link--refuge_logo.png" />
+            <div class="side" fxLayout="column" fxLayoutGap="0px">
+                <p class="article-heading">LEARN ABOUT</p>
+                <p class="article-heading">THE REFUGE</p>
+            </div>
+        </a>
+    </div>
+</section>
+
+<app-footer></app-footer>

@@ -27,6 +27,11 @@ const routes: Routes = [
     {
         path: 'donate',
         loadChildren: './donate/donate-routing.module#DonateRoutingModule'
+    },
+    {
+        path: 'the-refuge-partnership',
+        loadChildren:
+            './the-refuge-partnership/the-refuge-partnership-routing.module#TheRefugePartnershipRoutingModule'
     }
 ];
 

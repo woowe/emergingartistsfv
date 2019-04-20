@@ -11,7 +11,8 @@ const CONFIG = {
         homepage: '2aGAO8Y0jKi2ssk0aesaKs',
         overview: '2KMq5FOwmcWCem6Gugi4SI',
         getInvolved: '2Rvdirll0IgiggIU6UsmWc',
-        team: '2KfkaNoY124iaY0uUGqMmw'
+        team: '2KfkaNoY124iaY0uUGqMmw',
+        theRefugePartnership: '18vcaQzGQS4t4YCeqdHZMZ'
     }
 };
 
@@ -40,6 +41,10 @@ export class ContentfulService {
 
     getTeamData() {
         return this.cdaClient.getEntry(CONFIG.entryIds.team);
+    }
+
+    getRefugeData() {
+        return this.cdaClient.getEntry(CONFIG.entryIds.theRefugePartnership);
     }
 
     getGhostArt() {

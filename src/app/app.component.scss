@@ -27,6 +27,22 @@
         letter-spacing: 0.15em;
 
         text-indent: 0px;
+
+        color: white;
+        text-decoration: none;
+
+        &.org-title {
+            font-family: Oranienbaum;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 15px;
+            line-height: normal;
+            text-align: center;
+            letter-spacing: 0.15em;
+            text-transform: capitalize;
+
+            color: rgba(255, 255, 255, 0.54);
+        }
     }
 }
 

@@ -1,0 +1,11 @@
+<div class="header-image-container" fxLayoutAlign="center center">
+    <app-ratio-img
+        *ngIf="(image$ | async); let headerImage; else: skeleton"
+        imgsize="cover"
+        [src]="headerImage + '?fm=jpg&fl=progressive&w=650&h=336&fit=fill'"
+        alt=""
+    ></app-ratio-img>
+    <ng-template #skeleton>
+        <div class="skeleton-img"></div>
+    </ng-template>
+</div>

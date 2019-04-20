@@ -10,14 +10,14 @@ import {
 export const visitAnimation = [
     transition('* => *', [
         query(
-            ':enter, app-header-img',
+            ':enter',
             [style({ opacity: 0, transform: 'translateY(25px)' })],
             {
                 optional: true
             }
         ),
         query(
-            ':enter, app-header-img',
+            ':enter',
             [
                 style({ opacity: 0, transform: 'translateY(25px)' }),
                 stagger('75ms ease', [
